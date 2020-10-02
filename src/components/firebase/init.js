@@ -1,4 +1,7 @@
-var firebaseConfig = {
+import * as firebase from 'firebase/app'
+import firestore from 'firebase/firestore'
+
+const firebaseConfig = {
     apiKey: "AIzaSyD5IDH3A0j5yQUCXBTDq9797cQyb_fiaEE",
     authDomain: "ninja-smoothies-c4327.firebaseapp.com",
     databaseURL: "https://ninja-smoothies-c4327.firebaseio.com",
@@ -9,4 +12,12 @@ var firebaseConfig = {
     measurementId: "G-EQ1QWN5PY5"
 };
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+firebaseApp.firestore().settings({
+    timestampsInSnapshots: true
+})
+
+// export firestore database
+export default firebaseApp;
+export default firebaseApp.firestore()

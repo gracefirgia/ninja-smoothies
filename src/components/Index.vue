@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import database from "@/firebase/init.js";
 export default {
   name: "Index",
   data() {
