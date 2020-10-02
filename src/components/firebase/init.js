@@ -1,8 +1,3 @@
-import firebase from 'firebase/app';
-import firestore from 'firebase/firestore'
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 var firebaseConfig = {
     apiKey: "AIzaSyD5IDH3A0j5yQUCXBTDq9797cQyb_fiaEE",
     authDomain: "ninja-smoothies-c4327.firebaseapp.com",
@@ -14,10 +9,4 @@ var firebaseConfig = {
     measurementId: "G-EQ1QWN5PY5"
 };
 // Initialize Firebase
-const firebaseApp = firebase.initializeApp(firebaseConfig);
-// firebaseApp.firestore().settings({
-//     timestampsInSnapshots: true
-// })
-
-//export firestore database
-export default firebaseApp.firestore()
+firebase.initializeApp(firebaseConfig);
